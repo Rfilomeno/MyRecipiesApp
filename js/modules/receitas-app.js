@@ -1,4 +1,4 @@
-angular.module('ReceitasApp', ['ngRoute'])
+angular.module('ReceitasApp', ['ngRoute', 'minhasDiretivas'])
 
 .config(function ($routeProvider) {
         $routeProvider.when('/', {
