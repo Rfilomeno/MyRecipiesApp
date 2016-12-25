@@ -1,34 +1,23 @@
-<ul class="collection">
-    <li class="collection-item avatar">
-      <img src="images/yuna.jpg" alt="" class="circle">
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+<ul ng-controller="HomeController" class="collapsible popout" data-collapsible="accordion">
+    <li>
+        <div class="collapsible-header hoverable"><i class="material-icons"><img src="{{prato.img}}" width= "100%" alt=""></i>{{prato.titulo}}</div>
+        <div class="collapsible-body">
+            <p>{{prato.ingredientes}}</p>
+            <p>{{prato.preparo}}</p>
+        </div>
     </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle">folder</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+     <li>
+        <div class="collapsible-header hoverable"><i class="material-icons"><img src="{{prato2.img}}" width= "100%" alt=""></i>{{prato2.titulo}}</div>
+        <div class="collapsible-body">
+            <p>{{prato2.ingredientes}}</p>
+            <p>{{prato2.preparo}}</p>
+        </div>
     </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle green">insert_chart</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle red">play_arrow</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-  </ul>
+
+</ul>
+<script>
+    $(document).ready(function() {
+        $('.collapsible').collapsible();
+    });
+
+</script>
