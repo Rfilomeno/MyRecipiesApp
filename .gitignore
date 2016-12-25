@@ -6,6 +6,7 @@
 .LSOverride
 
 platforms/
+plugins/
 
 # Thumbnails
 ._*
