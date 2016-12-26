@@ -29,7 +29,7 @@ angular.module("ReceitasApp")
                         i;
                     for (i = 0; i < len; i++) {
                         response.pratos.push(results.rows.item(i));
-                        console.log(results.rows.item(i));
+
                     }
                 });
 

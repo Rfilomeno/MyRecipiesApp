@@ -23,10 +23,11 @@ angular.module('ReceitasApp').controller('HomeController', ['$scope', 'DbFactory
 //    ];
 
     DbFactory.loadDb();
-    this.pratoslist = DbFactory.pratos;
-    $scope.pratos = this.pratoslist;
-    console.log('at homectr:');
-    console.log($scope.pratos);
+    $scope.pratosList = DbFactory.pratos;
+    console.log($scope.pratosList);
+
+
+
 
 
 }]);
