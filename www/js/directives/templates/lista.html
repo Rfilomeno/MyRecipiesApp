@@ -2,10 +2,37 @@
     <li ng-repeat="prato in pratosList">
         <div class="collapsible-header"><i class="material-icons"><img src="{{prato.img}}" class="circle" width= "100%" alt=""></i>{{prato.nome}}</div>
         <div class="collapsible-body">
+
+
+
+                <div class="card horizontal row">
+                    <div class="card-image col s4 offset-s1">
+                        <img src={{prato.img}} class="z-depth-5">
+                    </div>
+                    <div class="card-stacked">
+                        <div id="psempadding" class="card-content">
+                            <h5>Ingredientes:</h5>
+                            <p id="psempadding">{{prato.ingredientes}}</p>
+                            <h5>Modo de Preparo:</h5>
+                            <p id="psempadding">{{prato.preparo}}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+<!--
             <h5>Ingredientes:</h5>
             <p>{{prato.ingredientes}}</p>
             <h5>Modo de Preparo:</h5>
             <p>{{prato.preparo}}</p>
+-->
         </div>
     </li>
 
