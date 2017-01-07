@@ -5,9 +5,7 @@ angular.module('ReceitasApp').controller('HomeController', ['$scope', 'DbFactory
     $scope.docesList = DbFactory.doces;
     $scope.bebidasList = DbFactory.bebidas;
 
-    console.log($scope.pratosList);
-    console.log($scope.docesList);
-    console.log($scope.bebidasList);
+    console.log(DbFactory.bebidas);
 
 
 

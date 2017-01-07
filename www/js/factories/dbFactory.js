@@ -49,7 +49,7 @@ angular.module("ReceitasApp")
                 });
                 // Insere bebidas na tabela
                 // Só descomenta se precisar apagar a tabela!
-                //                                                                 tx.executeSql('DROP TABLE IF EXISTS bebidas');
+                // tx.executeSql('DROP TABLE IF EXISTS bebidas');
                 tx.executeSql('CREATE TABLE IF NOT EXISTS bebidas (id unique, nome, ingredientes, preparo, img)');
                 tx.executeSql('INSERT INTO bebidas (id, nome, ingredientes, preparo, img) SELECT 1, "Coca Cola", "Segredo", "Compre no mercado!! :)",  "http://www.fundosanimais.com/Minis/leoes.jpg" WHERE NOT EXISTS (SELECT 1 FROM bebidas WHERE id = 1 AND nome = "Coca Cola")');
 
@@ -60,6 +60,7 @@ angular.module("ReceitasApp")
                         response.bebidas.push(results.rows.item(i));
 
                     }
+//                    console.log(response.bebidas);
                 });
 
 
