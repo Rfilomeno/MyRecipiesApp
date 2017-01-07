@@ -1,13 +1,22 @@
 angular.module('minhasDiretivas', [])
-    .directive('lista', function() {
-    var ddo = {};
-    ddo.restrict = "AE";
-    ddo.transclude = true;
-
-    ddo.scope = {
-        titulo: '@'
-    };
-    ddo.templateUrl = "js/directives/templates/lista.html"
-    return ddo;
-
+    .directive('lista', function () {
+        var ddo = {};
+        ddo.restrict = "AE";
+        ddo.transclude = true;
+        ddo.templateUrl = "js/directives/templates/listadepratos.html"
+        return ddo;
+    })
+    .directive('listadedoces', function () {
+        var ddo = {};
+        ddo.restrict = "AE";
+        ddo.transclude = true;
+        ddo.templateUrl = "js/directives/templates/listadedoces.html"
+        return ddo;
+    })
+    .directive('listadebebidas', function () {
+        var ddo = {};
+        ddo.restrict = "AE";
+        ddo.transclude = true;
+        ddo.templateUrl = "js/directives/templates/listadebebidas.html"
+        return ddo;
     })
