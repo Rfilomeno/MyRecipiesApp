@@ -1,0 +1,75 @@
+<!--input do nome-->
+<div class="row">
+    <div class="input-field col s6">
+        <input id="first_name2" type="text" class="validate">
+        <label class="active" for="first_name2">Nome</label>
+    </div>
+
+    <!--textarea dos ingredientes-->
+
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Ingredientes:</label>
+            </div>
+        </div>
+    </form>
+
+    <!-- textarea do mode de preparo -->
+
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Modo de preparo:</label>
+            </div>
+        </div>
+    </form>
+
+    <!--Select tipo da receita-->
+
+    <div class="input-field col s4">
+        <select>
+      <option value="" disabled selected>Escolha</option>
+      <option value="1">Prato</option>
+      <option value="2">Doces</option>
+      <option value="3">Bebidas</option>
+    </select>
+        <label>Tipo de receita</label>
+
+        <!--Foto-->
+        <div class="col s3">
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-button btn' data-activates='dropdown1'>Imagem</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="">Tirar Foto</a></li>
+                <li><a href="">Escolher da galeria</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div align="center">
+    <a class="waves-effect waves-light btn" href="/">salvar</a>
+</div>
+<script>
+    $(document).ready(function() {
+        Materialize.updateTextFields();
+
+        $('select').material_select();
+        $('#textarea1').trigger('autoresize');
+    });
+    $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrain_width: false, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: false, // Displays dropdown below the button
+        alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    });
+
+</script>
