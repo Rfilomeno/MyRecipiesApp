@@ -65,17 +65,17 @@ angular.module("ReceitasApp")
         //            });
         //        }
 
-        //        window.createuser = function (user) {
-        //
-        //            response.db.transaction(function (tx) {
-        //                tx.executeSql('INSERT INTO usuarios (nome, email, tel1, tel2, rua, compl, bairro, cep, senha, isLoged, fbId) SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ? WHERE NOT EXISTS (SELECT 1 FROM usuarios WHERE email = ?)', [user.nome, user.email, user.tel1, user.tel2, user.rua, user.compl, user.bairro, user.cep, user.password, user.fbId, user.email],
-        //                    function (tx, results) {
-        //
-        //                    });
-        //            }, function (err) {
-        //                console.log(err);
-        //            });
-        //        };
+        window.createprato = function (prato) {
+
+            response.db.transaction(function (tx) {
+                tx.executeSql('INSERT INTO pratos (id, nome, ingredientes, preparo, img) SELECT ?, ?, ?, ?, ? WHERE NOT EXISTS (SELECT 1 FROM pratos WHERE id = ?)', [prato.nome, prato.ingredientes, prato.preparo, prato.img],
+                    function (tx, results) {
+
+                    });
+            }, function (err) {
+                console.log(err);
+            });
+        };
 
         return response;
 
