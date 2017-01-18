@@ -21,8 +21,8 @@
     <form class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Modo de preparo:</label>
+                <textarea id="textarea2" class="materialize-textarea"></textarea>
+                <label for="textarea2">Modo de preparo:</label>
             </div>
         </div>
     </form>
@@ -30,7 +30,7 @@
     <!--Select tipo da receita-->
 
     <div class="input-field col s4">
-        <select>
+        <select id="tipoReceita">
           <option value="" disabled selected>Escolha</option>
           <option value="1">Prato</option>
           <option value="2">Doces</option>
@@ -52,9 +52,10 @@
     </div>
 </div>
 <div align="center">
-    <a class="waves-effect waves-light btn">salvar</a>
+    <a id="salvar" class="waves-effect waves-light btn">salvar</a>
     <a class="waves-effect waves-light btn" href="/">Voltar</a>
 </div>
+<script src="js/btnSalvar.js"></script>
 <script>
     $(document).ready(function() {
         Materialize.updateTextFields();
