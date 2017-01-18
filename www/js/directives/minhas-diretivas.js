@@ -13,10 +13,4 @@ angular.module('minhasDiretivas', [])
         ddo.templateUrl = "js/directives/templates/listadedoces.html"
         return ddo;
     })
-    .directive('listadebebidas', function () {
-        var ddo = {};
-        ddo.restrict = "AE";
-        ddo.transclude = true;
-        ddo.templateUrl = "js/directives/templates/listadebebidas.html"
-        return ddo;
-    })
+
