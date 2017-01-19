@@ -28,27 +28,32 @@
     </form>
 
     <!--Select tipo da receita-->
-
-    <div class="input-field col s4">
-        <select id="tipoReceita">
+    <div class="row">
+        <div class="input-field col s4">
+            <select id="tipoReceita">
           <option value="0" disabled selected>Escolha</option>
           <option value="1">Prato</option>
           <option value="2">Doces</option>
         </select>
-        <label>Tipo de receita</label>
-
-        <!--Foto-->
-        <div class="col s3">
+            <label>Tipo de receita</label>
+        </div>
+        <div class="col s4 offset-s1">
             <!-- Dropdown Trigger -->
             <a class='dropdown-button btn' data-activates='dropdown1'>Imagem</a>
 
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="">Tirar Foto</a></li>
+                <li><a href="" onclick="app.capturePhoto()">Tirar Foto</a></li>
                 <li><a href="">Escolher da galeria</a></li>
             </ul>
 
         </div>
+        <div align="center" class="col s12">
+            <img id="exibe" class="center" width="30%" src="" />
+
+        </div>
+
+        <!--Foto-->
     </div>
 </div>
 <div align="center">

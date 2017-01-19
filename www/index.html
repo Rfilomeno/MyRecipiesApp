@@ -17,24 +17,24 @@
 
 <body ng-app='ReceitasApp'>
     <div class="app">
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">My Recipies</a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="#">Sass</a></li>
-                        <li><a href="#">Components</a></li>
-                        <li><a href="#">Javascript</a></li>
-                        <li><a href="#">Mobile</a></li>
-                    </ul>
-                    <ul class="side-nav" id="mobile-demo">
-                        <li><a href="#">Sass</a></li>
-                        <li><a href="#">Components</a></li>
-                        <li><a href="#">Javascript</a></li>
-                        <li><a href="#">Mobile</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">My Recipies</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Sass</a></li>
+                    <li><a href="#">Components</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Mobile</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#">Sass</a></li>
+                    <li><a href="#">Components</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Mobile</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <ng-view></ng-view>
 
@@ -49,6 +49,7 @@
     <script src="js/directives/minhas-diretivas.js"></script>
     <script src="js/controllers/home-controller.js"></script>
     <script src="js/factories/dbFactory.js"></script>
+
 
     <script type="text/javascript">
         app.initialize();

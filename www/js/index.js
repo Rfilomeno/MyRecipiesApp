@@ -46,5 +46,31 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    capturePhoto: function () {
+
+        navigator.camera.getPicture(cameraSuccess, cameraError, {
+            // As cameras atuais têm alta resolução. 100 corresponde à qualidade máxima
+            quality: 20,
+            // Eu ia dar um exemplo usando DATA_URL, gerando uma imagem base64,
+            // mas várias fontes recomendam não se fazer isso por conta do consumo excessivo
+            // de memória.
+            destinationType: Camera.DestinationType.FILE_URI,
+            // Em Android faz salvar uma cópia no álbum padrão
+            saveToPhotoAlbum: true
+        });
+
+        function cameraSuccess(imageURI) {
+            window.image = document.getElementById('exibe');
+            // Trocar display:none por display:block para a imagem aparecer
+            image.style.display = "block";
+            // Passa o caminho da foto para preencher o src da img de id="exibe"
+            image.src = imageURI;
+        }
+
+        function cameraError(message) {
+            alert('Falhou: ' + message);
+        }
     }
 };

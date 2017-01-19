@@ -3,6 +3,7 @@ function limpaForm() {
     $("#textarea1").val('');
     $("#textarea2").val('');
 
+
 }
 
 
@@ -11,7 +12,7 @@ $("#salvar").click(function () {
         nome: $("#first_name2").val(),
         ingredientes: $("#textarea1").val(),
         preparo: $("#textarea2").val(),
-        img: ""
+        img: image.src
 
     }];
     if ($("#tipoReceita").val() == "1") {
