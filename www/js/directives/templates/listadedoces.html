@@ -1,6 +1,10 @@
 <ul  class="collapsible popout" data-collapsible="accordion">
     <li ng-repeat="doce in docesList">
-        <div class="collapsible-header"><i class="material-icons"><img src="{{doce.img}}" class="circle" width= "100%" alt=""></i>{{doce.nome}}</div>
+        <div class="collapsible-header"><i class="material-icons"><img src="{{doce.img}}" class="circle" width= "100%" alt=""></i>{{doce.nome}}
+        <div class="right">
+                <a hidden ><i style="margin-right: 0px; color: red;"  class="material-icons ">delete_forever</i></a>
+            </div>
+        </div>
         <div class="collapsible-body">
 
 
